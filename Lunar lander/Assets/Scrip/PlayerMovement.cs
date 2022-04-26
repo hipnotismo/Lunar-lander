@@ -4,33 +4,75 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private float leftAngle;
+    [SerializeField] private float rightAngle;
+    [SerializeField] private int speed;
     [SerializeField] private Rigidbody player;
+    [SerializeField] private float Up;
+
+    private float pieceSize;
+    bool movingClockwise;
 
     void Start()
     {
-        player = gameObject.GetComponent<Rigidbody>();
+        movingClockwise = true;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        move();
+        speedIncrease();
+        moveUp();
+    }
+
+    public void ChangeMoveDir()
+    {
+
+
+        if (transform.rotation.z > rightAngle)
+        {
+            movingClockwise = false;
+        }
+
+        if (transform.rotation.z < leftAngle)
+        {
+            movingClockwise = true;
+        }
+
+    }
+
+    public void move()
+    {
+        ChangeMoveDir();
+
         if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("FUCK");
-            player.AddTorque(5, 0, 10);
+            // transform.Rotate(new Vector3(0, 0, speed) * Time.deltaTime);
+            player.AddTorque(0, 0, speed);
         }
+
         if (Input.GetKey(KeyCode.D))
         {
+            player.AddTorque(0, 0, -speed);
+            //transform.Rotate(new Vector3(0, 0, -speed) * Time.deltaTime);
+        }
+    }
 
-        }
-        if (Input.GetKey(KeyCode.W))
+    public void speedIncrease()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            speed += 10;
         }
-        if (Input.GetKey(KeyCode.S))
+    }
+
+    public void moveUp()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            player.transform.Translate(0f, Up, 0f);
         }
     }
 }
