@@ -4,75 +4,63 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float leftAngle;
-    [SerializeField] private float rightAngle;
+    
     [SerializeField] private int speed;
-    [SerializeField] private Rigidbody player;
+    private Rigidbody player;
     [SerializeField] private float Up;
-
-    private float pieceSize;
-    bool movingClockwise;
-
+    [SerializeField] float torque;
+ 
     void Start()
     {
-        movingClockwise = true;
-
+        player = GetComponent<Rigidbody>();
+     
     }
 
     // Update is called once per frame
     void Update()
     {
         move();
-        speedIncrease();
         moveUp();
     }
 
-    public void ChangeMoveDir()
-    {
-
-
-        if (transform.rotation.z > rightAngle)
-        {
-            movingClockwise = false;
-        }
-
-        if (transform.rotation.z < leftAngle)
-        {
-            movingClockwise = true;
-        }
-
-    }
 
     public void move()
     {
-        ChangeMoveDir();
+        float turn = Input.GetAxis("Horizontal") * torque * Time.deltaTime;
+        float turn2 = Input.GetAxis("Vertical") * torque * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.A))
         {
-            // transform.Rotate(new Vector3(0, 0, speed) * Time.deltaTime);
-            player.AddTorque(0, 0, speed);
-        }
+            Debug.Log(turn);
 
+            player.AddTorque(transform.right * turn);
+        }
         if (Input.GetKey(KeyCode.D))
         {
-            player.AddTorque(0, 0, -speed);
-            //transform.Rotate(new Vector3(0, 0, -speed) * Time.deltaTime);
+            Debug.Log(turn);
+            player.AddTorque(transform.right * turn);
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            Debug.Log(turn);
+
+            player.AddTorque(transform.right * turn2);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            Debug.Log(turn);
+            player.AddTorque(transform.right * turn2);
         }
     }
 
-    public void speedIncrease()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            speed += 10;
-        }
-    }
+  
 
     public void moveUp()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            player.transform.Translate(0f, Up, 0f);
+           // player.transform.up(0f, Up, 0f);
         }
     }
 }
