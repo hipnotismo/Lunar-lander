@@ -43,14 +43,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            //Debug.Log(turn);
+            Debug.Log(turn2);
 
-            //player.AddTorque(transform.up * turn2);
+            player.AddTorque(transform.forward * turn2);
         }
         if (Input.GetKey(KeyCode.S))
         {
             Debug.Log(turn2);
-            player.AddTorque(transform.up * turn2);
+            player.AddTorque(transform.forward * turn2);
         }
     }
 
