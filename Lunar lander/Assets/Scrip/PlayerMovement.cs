@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         {
            // Debug.Log("jump");
             player.AddForce(transform.up * Up );
-            Debug.Log(transform.up * Up * Time.deltaTime);
+            Debug.Log(transform.up * Up);
 
         }
     }

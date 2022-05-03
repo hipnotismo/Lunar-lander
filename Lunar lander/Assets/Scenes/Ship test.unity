@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3334479249560807378, guid: 4b867adfbd0ccc0449cef6e78a4148c0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ac6a3fa69481cc4292c183a2886eab8, type: 2}
     - target: {fileID: 919132149155446097, guid: 4b867adfbd0ccc0449cef6e78a4148c0, type: 3}
       propertyPath: m_Name
       value: STONES
@@ -445,8 +449,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760129025}
-  m_LocalRotation: {x: -0.14292504, y: 0.26292416, z: -0.039416235, w: -0.95335704}
-  m_LocalPosition: {x: -125.44674, y: 196.0904, z: -38.97376}
+  m_LocalRotation: {x: -0.017460585, y: 0.69600046, z: -0.016910067, w: -0.7176298}
+  m_LocalPosition: {x: 13.265689, y: 2.176451, z: 0.23089857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -478,8 +482,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308412565}
-  m_LocalRotation: {x: -0.17133534, y: 0.0832389, z: -0.014529941, w: -0.9815826}
-  m_LocalPosition: {x: -139.32, y: 192.12, z: -23.64}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1439483399}
@@ -499,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
-  Up: 1
+  Up: 0.5
   torque: 20
 --- !u!54 &1308412568
 Rigidbody:
@@ -581,10 +585,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7283520593522058921, guid: b947b6ec8090e184db976e638b017d0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f0414ea3fce0ca4b98a2d306e8179f0, type: 2}
+    - target: {fileID: -6628104925020637367, guid: b947b6ec8090e184db976e638b017d0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5015da12e4858e949a627c8cccb05640, type: 2}
+    - target: {fileID: -5101127010392729390, guid: b947b6ec8090e184db976e638b017d0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5015da12e4858e949a627c8cccb05640, type: 2}
     - target: {fileID: 919132149155446097, guid: b947b6ec8090e184db976e638b017d0c, type: 3}
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 6500495749138630288, guid: b947b6ec8090e184db976e638b017d0c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5015da12e4858e949a627c8cccb05640, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b947b6ec8090e184db976e638b017d0c, type: 3}
 --- !u!4 &1439483399 stripped
@@ -681,7 +701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625014710}
   m_LocalRotation: {x: -0, y: -0, z: 0.08392664, w: 0.996472}
-  m_LocalPosition: {x: -134.1164, y: 190.5392, z: 62.0018}
+  m_LocalPosition: {x: -134.11517, y: 190.53662, z: 62.046047}
   m_LocalScale: {x: 32.54813, y: 1, z: 234.3699}
   m_Children: []
   m_Father: {fileID: 0}
