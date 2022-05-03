@@ -41,27 +41,30 @@ public class PlayerMovement : MonoBehaviour
             player.AddTorque(transform.right * turn);
         }
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            Debug.Log(turn2);
+        // de momento hacelo en 2d
+        //if (Input.GetKey(KeyCode.W))
+        //{
+        //    Debug.Log(turn2);
 
-            player.AddTorque(transform.forward * turn2);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            Debug.Log(turn2);
-            player.AddTorque(transform.forward * turn2);
-        }
+        //    player.AddTorque(transform.forward * turn2);
+        //}
+        //if (Input.GetKey(KeyCode.S))
+        //{
+        //    Debug.Log(turn2);
+        //    player.AddTorque(transform.forward * turn2);
+        //}
     }
 
   
 
     public void moveUp()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
-            float turn2 = Input.GetAxis("Vertical") * torque * Time.deltaTime;
-            player.AddTorque(transform.up * turn2);
+           // Debug.Log("jump");
+            player.AddForce(transform.up * Up );
+            Debug.Log(transform.up * Up * Time.deltaTime);
+
         }
     }
 }
