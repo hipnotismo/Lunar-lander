@@ -60,7 +60,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           // player.transform.up(0f, Up, 0f);
+            float turn2 = Input.GetAxis("Vertical") * torque * Time.deltaTime;
+            player.AddTorque(transform.up * turn2);
         }
     }
 }
