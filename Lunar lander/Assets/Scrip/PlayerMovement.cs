@@ -34,21 +34,35 @@ public class PlayerMovement : MonoBehaviour
 
         // turn = Mathf.Clamp(turn, -90, 90);
 
-        if (Input.GetKey(KeyCode.A ) && pVector > -15)
+        if (Input.GetKey(KeyCode.A ) )
         {
-         //   player.freezeRotation = false;
-            Debug.Log(turn);
-            player.AddTorque(transform.right * turn);
+            if (pVector > -15)
+            {
+                player.freezeRotation = false;
+                Debug.Log(turn);
+                player.AddTorque(transform.right * turn);
+            }
+            else
+            {
+                //player.freezeRotation = true;
+                Debug.Log("else");
 
+                player.angularVelocity = new Vector3(0,0,0);
+            }
         }
-        else
+        if (Input.GetKey(KeyCode.I))
         {
-//            Debug.Log(turn);
-            //    player.AddTorque(transform.right * 0);
-           /// player.freezeRotation = true;
-
+            Debug.Log("i");
+            player.angularVelocity = new Vector3(0, 0, 0);
         }
-        if (Input.GetKey(KeyCode.D))
+            //        else
+            //        {
+            ////            Debug.Log(turn);
+            //            //    player.AddTorque(transform.right * 0);
+            //           /// player.freezeRotation = true;
+
+            //        }
+            if (Input.GetKey(KeyCode.D))
         {
             Debug.Log(turn);
             player.AddTorque(transform.right * turn);
