@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody player;
     [SerializeField] private float Up;
     [SerializeField] float torque;
+    private float pVector;
  
     void Start()
     {
@@ -28,12 +29,24 @@ public class PlayerMovement : MonoBehaviour
     {
         float turn = Input.GetAxis("Horizontal") * torque * Time.deltaTime;
         float turn2 = Input.GetAxis("Vertical") * torque * Time.deltaTime;
+        pVector = transform.eulerAngles.x;
+       // Debug.Log(pVector);
 
-        if (Input.GetKey(KeyCode.A))
+        // turn = Mathf.Clamp(turn, -90, 90);
+
+        if (Input.GetKey(KeyCode.A ) && pVector > -15)
         {
+         //   player.freezeRotation = false;
             Debug.Log(turn);
-
             player.AddTorque(transform.right * turn);
+
+        }
+        else
+        {
+//            Debug.Log(turn);
+            //    player.AddTorque(transform.right * 0);
+           /// player.freezeRotation = true;
+
         }
         if (Input.GetKey(KeyCode.D))
         {
