@@ -1,0 +1,5 @@
+Main menu
+Pause menu
+Win con
+Lose con
+Singleton to hold variables throur play sesions. 
