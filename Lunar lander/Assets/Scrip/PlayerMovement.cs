@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     
-    [SerializeField] private int speed;
     private Rigidbody player;
     [SerializeField] private float Up;
     [SerializeField] float torque;
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         float turn = Input.GetAxis("Horizontal") * torque * Time.deltaTime;
         float turn2 = Input.GetAxis("Vertical") * torque * Time.deltaTime;
         pVector = transform.eulerAngles.x;
-      Debug.Log(pVector);
+    //  Debug.Log(pVector);
 
         // turn = Mathf.Clamp(turn, -90, 90);
 
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
             //if (pVector > 345 && pVector <= 360 && pVector )
             //{
                 //Debug.Log("if");
-                Debug.Log(pVector);
+               // Debug.Log(pVector);
                 player.AddTorque(transform.right * turn);
             
             //else
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.I))
         {
-            Debug.Log("i");
+          //  Debug.Log("i");
             player.angularVelocity = new Vector3(0, 0, 0);
         }
             //        else
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             //        }
             if (Input.GetKey(KeyCode.D))
         {
-            Debug.Log(turn);
+          //  Debug.Log(turn);
             player.AddTorque(transform.right * turn);
         }
 
@@ -90,8 +90,15 @@ public class PlayerMovement : MonoBehaviour
         {
            // Debug.Log("jump");
             player.AddForce(transform.up * Up );
-            Debug.Log(transform.up * Up);
+         //   Debug.Log(transform.up * Up);
 
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        player.isKinematic = true;
+        Debug.Log("aaaaa");
+        SceneManager.LoadScene("More testing");
     }
 }
