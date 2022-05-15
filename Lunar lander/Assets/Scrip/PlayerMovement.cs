@@ -10,11 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float Up;
     [SerializeField] float torque;
     private float pVector;
+    private bool done;
  
     void Start()
     {
         player = GetComponent<Rigidbody>();
-     
+        done = false;
     }
 
     // Update is called once per frame
@@ -22,6 +23,17 @@ public class PlayerMovement : MonoBehaviour
     {
         move();
         moveUp();
+        if (Input.GetButton("Submit"))
+        {
+            if (done == true)
+            {
+                done = false;
+                Debug.Log("restart");
+                Restart();
+            }          
+        }
+
+       
     }
 
 
@@ -88,17 +100,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButton("Jump"))
         {
-           // Debug.Log("jump");
             player.AddForce(transform.up * Up );
-         //   Debug.Log(transform.up * Up);
 
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        done = true;
         player.isKinematic = true;
         Debug.Log("aaaaa");
+    }
+
+    public void Restart()
+    {
         SceneManager.LoadScene("More testing");
     }
 }
