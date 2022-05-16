@@ -7,16 +7,23 @@ public class plataform : MonoBehaviour
     public Transform target;
     [SerializeField] private float MinAngle;
     [SerializeField] private float MaxAngle;
+    private GameObject manager;
+
+    private void Start()
+    {
+        manager = GameObject.Find("Canvas");
+
+    }
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            Vector3 targetDir = target.position - transform.position;
-            float angle = Vector3.Angle(targetDir, transform.forward);
-            Debug.Log(angle);
+        //if (Input.GetKeyUp(KeyCode.A))
+        //{
+        //    Vector3 targetDir = target.position - transform.position;
+        //    float angle = Vector3.Angle(targetDir, transform.forward);
+        //    Debug.Log(angle);
 
-        }
+        //}
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,11 +33,16 @@ public class plataform : MonoBehaviour
         if (angle < MinAngle | angle > MaxAngle)
         {
             Debug.Log("lost");
-
+            // manager.SendMessage("addPoints", 5.0);
+            PointManager.inst.addPoints(10);
         }
         else
         {
             Debug.Log("win");
+            PointManager.inst.addPoints(20);
+
+            //  manager.SendMessage("addPoints", 10.0);
+
         }
         //Debug.Log("Contacto");
     }
