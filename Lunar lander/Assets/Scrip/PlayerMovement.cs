@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float MaxUp;
     [SerializeField] private float Up;
     [SerializeField] float torque;
+    [SerializeField] private float fuel;
     private float pVector;
     private bool done;
  
@@ -70,7 +71,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButton("Jump"))
         {
-            player.AddForce(transform.up * Up );
+            if (fuel != 0)
+            {
+                player.AddForce(transform.up * Up);
+                fuel -= 1 * Time.deltaTime;
+                Debug.Log(fuel);
+
+            }
 
         }
     }
