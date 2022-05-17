@@ -35,6 +35,11 @@ public class PointManager : MonoBehaviour
     {
         points += add;
         score.text = points.ToString() + " POINTS";
+        if (maxPoints < points)
+        {
+            maxPoints = points;
+            highScore.text = maxPoints.ToString() + " MAX POINTS";
+        }
 
     }
 }
