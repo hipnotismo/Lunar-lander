@@ -34,12 +34,12 @@ public class plataform : MonoBehaviour
         {
             Debug.Log("lost");
             // manager.SendMessage("addPoints", 5.0);
-            PointManager.inst.addPoints(10);
+            GameManager.inst.addPoints(10);
         }
         else
         {
             Debug.Log("win");
-            PointManager.inst.addPoints(20);
+            GameManager.inst.addPoints(20);
 
             //  manager.SendMessage("addPoints", 10.0);
 

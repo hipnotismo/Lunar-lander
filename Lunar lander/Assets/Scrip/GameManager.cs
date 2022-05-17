@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PointManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static PointManager inst;
+    public static GameManager inst;
     [SerializeField] private float points;
     private float maxPoints;
 
-    public Text score;
-    public Text highScore;
+    [SerializeField] private Text score;
+    [SerializeField] private Text highScore;
 
     private void Awake()
     {
-        if (PointManager.inst == null)
+        if (GameManager.inst == null)
         {
             maxPoints = 0;
-            PointManager.inst = this;
+            GameManager.inst = this;
             DontDestroyOnLoad(gameObject);
         }
         else
