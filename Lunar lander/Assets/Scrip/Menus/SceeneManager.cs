@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceeneManager : MonoBehaviour
 {
-   public void gameplayButton()
+    [SerializeField] private AudioSource button;
+
+    public void gameplayButton()
     {
         SceneManager.LoadScene("Gameplay");
+        //button.PlayOneShot(clip);
     }
 
     public void exitButton()

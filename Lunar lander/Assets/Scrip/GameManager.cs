@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject WinMenu;
     [SerializeField] private GameObject LoseMenu;
 
+
     private void Awake()
     {
         if (GameManager.inst == null)
