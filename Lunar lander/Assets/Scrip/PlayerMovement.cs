@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GetComponent<Rigidbody>();
         done = false;
-        propulsion.Pause();
+        propulsion.Play();
     }
 
     // Update is called once per frame
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log(fuel);
                 if (useSound)
                 {
-                    propulsion.UnPause();
+                    //propulsion.UnPause();
 
                 }
             }
@@ -89,8 +89,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            propulsion.Pause();
-
+            //propulsion.Pause();
         }
 
     }
@@ -101,6 +100,8 @@ public class PlayerMovement : MonoBehaviour
         player.isKinematic = true;
         Debug.Log("aaaaa");
         useSound = false;
+        GameManager.inst.addPoints(fuel * 2);
+
     }
 
     public void Restart()

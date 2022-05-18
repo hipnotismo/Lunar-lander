@@ -7,6 +7,9 @@ public class AudioControler : MonoBehaviour
 
     [SerializeField] private AudioSource _music;
     public static AudioControler inst;
+    [SerializeField] private GameObject ActiveMusic;
+    [SerializeField] private GameObject SilentMusic;
+    public bool isActive = true;
 
     private void Awake()
     {
@@ -21,4 +24,28 @@ public class AudioControler : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public static void Pause( )
+    {
+        inst.isActive = false;
+        if (inst.isActive == false)
+        {
+            inst.ActiveMusic.SetActive(false);
+            inst.SilentMusic.SetActive(true);
+        }
+        inst._music.Pause();
+    }
+
+    public static void Resume()
+    {
+        inst.isActive = true;
+        if (inst.isActive == true)
+        {
+            inst.ActiveMusic.SetActive(true);
+            inst.SilentMusic.SetActive(false);
+        }
+        inst._music.UnPause();
+    }
+
+ 
 }

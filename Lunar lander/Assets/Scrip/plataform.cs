@@ -8,8 +8,8 @@ public class plataform : MonoBehaviour
     [SerializeField] private float MinAngle;
     [SerializeField] private float MaxAngle;
 
-    [SerializeField] private int  MinPoints;
-    [SerializeField] private int  MaxPoints;
+    [SerializeField] private float MinPoints;
+    [SerializeField] private float MaxPoints;
 
     private void Start()
     {

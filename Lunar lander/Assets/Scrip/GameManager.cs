@@ -53,14 +53,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void addPoints(int add)
+    public void addPoints(float add)
     {
         points += add;
-        score.text = points.ToString() + " POINTS";
+        score.text = "POINTS: " + points.ToString();
         if (maxPoints < points)
         {
             maxPoints = points;
-            highScore.text = maxPoints.ToString() + " MAX POINTS";
+            highScore.text = "MAX POINTS: " + maxPoints.ToString();
         }
 
     }
