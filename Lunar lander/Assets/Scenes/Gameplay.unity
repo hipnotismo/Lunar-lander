@@ -203,6 +203,14 @@ PrefabInstance:
       propertyPath: MinAngle
       value: 106.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
 --- !u!1 &68566935
@@ -578,6 +586,14 @@ PrefabInstance:
     - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
       propertyPath: MinAngle
       value: 106.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
@@ -994,6 +1010,14 @@ PrefabInstance:
       propertyPath: MinAngle
       value: 106.72
       objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
 --- !u!1001 &485794112
@@ -1362,6 +1386,14 @@ PrefabInstance:
     - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
       propertyPath: MinAngle
       value: 106.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
@@ -1909,6 +1941,14 @@ PrefabInstance:
       propertyPath: MinAngle
       value: 106.35
       objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
 --- !u!4 &755181787 stripped
@@ -2206,6 +2246,14 @@ PrefabInstance:
       propertyPath: MinAngle
       value: 106.11
       objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
 --- !u!1 &865928240
@@ -2484,6 +2532,14 @@ PrefabInstance:
     - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
       propertyPath: MinAngle
       value: 106.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
@@ -3575,6 +3631,14 @@ PrefabInstance:
       propertyPath: MinAngle
       value: 106.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
 --- !u!4 &1400264546 stripped
@@ -4115,6 +4179,14 @@ PrefabInstance:
     - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
       propertyPath: MinAngle
       value: 106.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
@@ -4660,6 +4732,14 @@ PrefabInstance:
     - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
       propertyPath: MinAngle
       value: 106.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MaxPoints
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450554484477592815, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}
+      propertyPath: MinPoints
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff5b7a6bb8fd574d98c7546aa26d486, type: 3}

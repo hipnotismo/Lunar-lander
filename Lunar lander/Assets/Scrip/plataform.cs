@@ -8,6 +8,9 @@ public class plataform : MonoBehaviour
     [SerializeField] private float MinAngle;
     [SerializeField] private float MaxAngle;
 
+    [SerializeField] private int  MinPoints;
+    [SerializeField] private int  MaxPoints;
+
     private void Start()
     {
 
@@ -26,13 +29,13 @@ public class plataform : MonoBehaviour
         {
             Debug.Log("lost");
             // manager.SendMessage("addPoints", 5.0);
-            GameManager.inst.addPoints(10);
+            GameManager.inst.addPoints(MinPoints);
             GameManager.inst.Lose();
         }
         else
         {
             Debug.Log("win");
-            GameManager.inst.addPoints(20);
+            GameManager.inst.addPoints(MaxPoints);
             GameManager.inst.Win();
 
             //  manager.SendMessage("addPoints", 10.0);
