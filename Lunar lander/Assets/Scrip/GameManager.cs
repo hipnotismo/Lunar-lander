@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        score.text = points.ToString() + " POINTS";
-        highScore.text = maxPoints.ToString() + " MAX POINTS";
+        score.text = "POINTS: " + points.ToString() ;
+        highScore.text = "MAX POINTS: " + maxPoints.ToString();
     }
    public void addPoints(int add)
     {
