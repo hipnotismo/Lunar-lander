@@ -8,3 +8,6 @@
 * >Martin concetti: martinconcetti97@gmail.com
 
 #### Artis contact information: 
+* >Andres Pluda
+* >Mail:pludaandres@gmail.com
+* >Instagram: pludaandres
