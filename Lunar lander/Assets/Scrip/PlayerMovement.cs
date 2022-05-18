@@ -11,13 +11,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float Up;
     [SerializeField] float torque;
     [SerializeField] private float fuel;
+    [SerializeField] private AudioSource propulsion;
     private float pVector;
     private bool done;
- 
+
+    private bool useSound = true;
     void Start()
     {
         player = GetComponent<Rigidbody>();
         done = false;
+        propulsion.Pause();
     }
 
     // Update is called once per frame
@@ -76,10 +79,20 @@ public class PlayerMovement : MonoBehaviour
                 player.AddForce(transform.up * Up);
                 fuel -= 1 * Time.deltaTime;
                 Debug.Log(fuel);
+                if (useSound)
+                {
+                    propulsion.UnPause();
 
+                }
             }
 
         }
+        else
+        {
+            propulsion.Pause();
+
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -87,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
         done = true;
         player.isKinematic = true;
         Debug.Log("aaaaa");
+        useSound = false;
     }
 
     public void Restart()
