@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 done = false;
                 Debug.Log("restart");
-                Restart();
+                //Restart();
             }          
         }
 
@@ -91,6 +91,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("More testing");
+        SceneManager.LoadScene("Gameplay");
     }
 }
