@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GetComponent<Rigidbody>();
         done = false;
+        propulsion = GetComponent<AudioSource>();
         propulsion.Play();
     }
 
@@ -81,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log(fuel);
                 if (useSound)
                 {
-                    //propulsion.UnPause();
+                    propulsion.UnPause();
 
                 }
             }
@@ -89,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            //propulsion.Pause();
+            propulsion.Pause();
         }
 
     }

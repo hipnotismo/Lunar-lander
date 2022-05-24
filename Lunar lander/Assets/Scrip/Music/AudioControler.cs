@@ -9,6 +9,7 @@ public class AudioControler : MonoBehaviour
     public static AudioControler inst;
     [SerializeField] private GameObject ActiveMusic;
     [SerializeField] private GameObject SilentMusic;
+
     public bool isActive = true;
 
     private void Awake()
